@@ -20,9 +20,8 @@ def cadastrar_paciente(pacientes_cadastrados):
     for paciente in pacientes_cadastrados:
         if paciente['telefone'] == telefone:
             print("Paciente já cadastrado!")
-            return
-        
-    
+            return  
+            
     pacientes_cadastrados.append({"nome": nome, "telefone": telefone})
     print("Paciente cadastrado com sucesso!")
 
@@ -65,7 +64,6 @@ def marcacao_consulta(lista_agendamentos, pacientes_cadastrados):
                     print("Este horario está indisponível, tente outro.")
                     return
                 
-        
             lista_agendamentos.append({"paciente": paciente["nome"], "data": data, "hora": hora, "especialidade": especialidade})
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Consulta agendada com sucesso!")
